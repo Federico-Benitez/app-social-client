@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA,gBACE,WAAY,CACZ,WACF,CACA,gBACE,qBACF","file":"main.aebba35f.chunk.css","sourcesContent":[".form-container {\r\n  width: 400px;\r\n  margin: auto;\r\n}\r\n.tercer-columna {\r\n  background-color: black;\r\n}\r\n"]}
