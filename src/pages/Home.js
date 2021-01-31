@@ -21,7 +21,7 @@ function Home() {
   );
 
   return (
-    <Grid columns={3}>
+    <Grid columns={1}>
       <Grid.Row>
         <Container textAlign="center">
           <h1>
