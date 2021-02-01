@@ -1,17 +1,13 @@
 import React, { useContext } from "react";
 import { useQuery } from "@apollo/client";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  Container,
-  Grid
-} from "semantic-ui-react";
+import { Container, Grid, Header } from "semantic-ui-react";
 
 import PostCard from "../component/PostCard";
 import PostForm from "../component/PostForm";
 import { AuthContext } from "../context/auth";
 import { FETCH_POSTS_QUERY } from "../util/graphql";
+
+import "./Home.css";
 
 function Home() {
   const { user } = useContext(AuthContext);
@@ -21,16 +17,7 @@ function Home() {
   );
 
   return (
-    <Grid columns={1}>
-      <Grid.Row>
-        <Container textAlign="center">
-          <h1>
-            {/* <p>Hola {user ? user.username : null}</p> */}
-            Publicaciones Recientes
-          </h1>
-        </Container>
-      </Grid.Row>
-
+    <Grid columns={1} stackable>
       <Grid.Row>
         <Grid.Column>
           {user && (
@@ -39,14 +26,24 @@ function Home() {
             </Grid.Column>
           )}
         </Grid.Column>
+        <Grid.Row>
+          <Container textAlign="center">
+            <Header as="h1" textAlign="center" style={{ marginBottom: 20 }}>
+              {/* <p>Hola {user ? user.username : null}</p> */}
+              Publicaciones Recientes
+            </Header>
+          </Container>
+        </Grid.Row>
 
         {loading ? (
           <h1> Cargando...</h1>
         ) : (
           posts &&
           posts.map((post) => (
-            <Grid.Column key={post.id} style={{ marginBottom: 20 }}>
-              <PostCard post={post} />
+            <Grid.Column key={post.id}>
+              <div className="Publicaciones">
+                <PostCard post={post} />
+              </div>
             </Grid.Column>
           ))
         )}

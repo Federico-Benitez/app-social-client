@@ -12,7 +12,7 @@ function MenuBar() {
   const [activeItem, setActiveItem] = useState(path);
 
   const menuBar = user ? (
-    <Menu pointing secondary size="massive" color="blue">
+    <Menu stackable pointing secondary size="massive" color="blue">
       <Menu.Item
         name="Inicio"
         active={activeItem === "home"}
@@ -26,7 +26,7 @@ function MenuBar() {
       </Menu.Menu>
     </Menu>
   ) : (
-    <Menu pointing secondary size="massive" color="blue">
+    <Menu stackable pointing secondary size="massive" color="blue">
       <Menu.Item
         name="Inicio"
         active={activeItem === "home"}

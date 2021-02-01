@@ -1,0 +1,30 @@
+.title{
+    width: max-content;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FormNuevo{
+    margin-bottom: 10px;
+    width: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block
+}
+
+.InputPublicacion{
+    margin-bottom: 50px ; 
+    width: max-content;
+    justify-content: center ;
+    align-items: center;
+    display: inline;    
+}
+
+.BlokqueForm{
+    width: min-content;    
+    display: flex;
+    flex-direction: column;
+}
