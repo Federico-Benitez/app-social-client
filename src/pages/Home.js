@@ -1,17 +1,13 @@
 import React, { useContext } from "react";
 import { useQuery } from "@apollo/client";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  Container,
-  Grid
-} from "semantic-ui-react";
+import { Container, Grid } from "semantic-ui-react";
 
 import PostCard from "../component/PostCard";
 import PostForm from "../component/PostForm";
 import { AuthContext } from "../context/auth";
 import { FETCH_POSTS_QUERY } from "../util/graphql";
+
+import "./Home.css";
 
 function Home() {
   const { user } = useContext(AuthContext);
@@ -21,7 +17,7 @@ function Home() {
   );
 
   return (
-    <Grid columns={1}>
+    <Grid columns={1} stackable>
       <Grid.Row>
         <Container textAlign="center">
           <h1>
@@ -45,8 +41,10 @@ function Home() {
         ) : (
           posts &&
           posts.map((post) => (
-            <Grid.Column key={post.id} style={{ marginBottom: 20 }}>
-              <PostCard post={post} />
+            <Grid.Column key={post.id}>
+              <div className="Publicaciones">
+                <PostCard post={post} />
+              </div>
             </Grid.Column>
           ))
         )}
