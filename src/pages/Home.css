@@ -1,8 +1,22 @@
 .Publicaciones{
-    /* margin-bottom: 10px; */
+    margin-bottom: 10px; 
     padding: 2;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
+.FormNuevo{
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min-content;
+    
+}
+
+.title{
+    width: min-content;
+
+}

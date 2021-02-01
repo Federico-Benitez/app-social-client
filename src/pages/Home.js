@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useQuery } from "@apollo/client";
-import { Container, Grid } from "semantic-ui-react";
+import { Container, Grid, Header } from "semantic-ui-react";
 
 import PostCard from "../component/PostCard";
 import PostForm from "../component/PostForm";
@@ -19,15 +19,6 @@ function Home() {
   return (
     <Grid columns={1} stackable>
       <Grid.Row>
-        <Container textAlign="center">
-          <h1>
-            {/* <p>Hola {user ? user.username : null}</p> */}
-            Publicaciones Recientes
-          </h1>
-        </Container>
-      </Grid.Row>
-
-      <Grid.Row>
         <Grid.Column>
           {user && (
             <Grid.Column>
@@ -35,6 +26,14 @@ function Home() {
             </Grid.Column>
           )}
         </Grid.Column>
+        <Grid.Row>
+          <Container textAlign="center">
+            <Header as="h1" textAlign="center" style={{ marginBottom: 20 }}>
+              {/* <p>Hola {user ? user.username : null}</p> */}
+              Publicaciones Recientes
+            </Header>
+          </Container>
+        </Grid.Row>
 
         {loading ? (
           <h1> Cargando...</h1>
