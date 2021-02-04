@@ -1,4 +1,3 @@
-https://awesome-spence-6f61e4.netlify.app/
 
 # Getting Started with Create React App
 
